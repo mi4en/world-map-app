@@ -10,11 +10,14 @@ import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
 export default {
 	name: 'world-map',
 	mounted() {
-		let map = am4core.create('mapdiv', am4maps.MapChart);
+		let map = am4core.create(this.$refs.mapdiv, am4maps.MapChart);
 
 		map.geodata = am4geodata_worldLow;
 
-		map.projection = new am4maps.projections.Miller();
+		map.projection = new am4maps.projections.NaturalEarth1();
+
+		var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
+		polygonSeries.useGeodata = true;
 	},
 
 	beforeDestroy() {
