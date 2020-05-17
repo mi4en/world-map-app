@@ -14,7 +14,7 @@ export default {
 
 		map.geodata = am4geodata_worldLow;
 
-		map.projection = new am4maps.projections.NaturalEarth1();
+		map.projection = new am4maps.projections.Miller();
 
 		var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
 		polygonSeries.useGeodata = true;
@@ -30,8 +30,8 @@ export default {
 
 <style scoped lang="scss">
 .world-map {
-	height: 100%;
-	width: 80%;
+	height: 600px;
+	width: 100%;
 	margin: 0 auto;
 }
 </style>
