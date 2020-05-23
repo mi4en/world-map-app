@@ -6,11 +6,16 @@
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
+import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 
 export default {
 	name: 'world-map',
 	mounted() {
+		am4core.useTheme(am4themes_animated);
+
 		let map = am4core.create(this.$refs.chartdiv, am4maps.MapChart);
+
+		map.hiddenState.properties.opacity = 0;
 
 		map.geodata = am4geodata_worldLow;
 
@@ -230,6 +235,9 @@ export default {
 			{ id: 'ZM', value: 57.037 },
 			{ id: 'ZW', value: 58.142 },
 		];
+
+		// excludes Antarctica
+		polygonSeries.exclude = ['AQ'];
 
 		polygonSeries.mapPolygons.template.events.on('hit', function(ev) {
 			map.zoomToMapObject(ev.target);

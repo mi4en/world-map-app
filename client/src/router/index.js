@@ -25,6 +25,11 @@ const routes = [
 		name: 'map',
 		component: () => import('../views/WorldMap'),
 	},
+	{
+		path: '/acronis',
+		name: 'acronis',
+		component: () => import('../views/Acronis'),
+	},
 ];
 
 const router = new VueRouter({
