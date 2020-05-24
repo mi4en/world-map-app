@@ -3,7 +3,7 @@
 		<div id="nav">
 			<router-link to="/">Home</router-link> | <router-link to="/chart">Chart</router-link> |
 			<router-link to="/map">Map</router-link> | <router-link to="/acronis-html">Acronis HTML</router-link> |
-			<router-link to="/acronis-js">Acronis JS</router-link>
+			<router-link to="/acronis-js">Acronis JS</router-link> | <router-link to="/acronis-vue">Acronis VUE</router-link>
 		</div>
 		<router-view />
 	</div>

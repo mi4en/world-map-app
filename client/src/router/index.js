@@ -30,6 +30,11 @@ const routes = [
 		name: 'acronis-js',
 		component: () => import('../views/AcronisJs'),
 	},
+	{
+		path: '/acronis-vue',
+		name: 'acronis-vue',
+		component: () => import('../views/AcronisVue'),
+	},
 ];
 
 const router = new VueRouter({
