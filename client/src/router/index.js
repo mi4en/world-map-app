@@ -11,11 +11,6 @@ const routes = [
 		component: Home,
 	},
 	{
-		path: '/about',
-		name: 'About',
-		component: () => import('../views/About.vue'),
-	},
-	{
 		path: '/chart',
 		name: 'chart',
 		component: () => import('../views/Chart'),
@@ -26,9 +21,14 @@ const routes = [
 		component: () => import('../views/WorldMap'),
 	},
 	{
-		path: '/acronis',
-		name: 'acronis',
-		component: () => import('../views/Acronis'),
+		path: '/acronis-html',
+		name: 'acronis-html',
+		component: () => import('../views/AcronisHTML'),
+	},
+	{
+		path: '/acronis-js',
+		name: 'acronis-js',
+		component: () => import('../views/AcronisJs'),
 	},
 ];
 
